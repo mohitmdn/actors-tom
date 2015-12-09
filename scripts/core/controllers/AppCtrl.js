@@ -10,12 +10,12 @@
         var s = $scope,
             rs = $rootScope;
 
-        s.init = function() {
-            if (!rs.user) {
-                $location.path('/pages/signin');
-            }
-        };
-        s.init();
+        //s.init = function() {
+        //    if (!rs.user) {
+        //        $location.path('/pages/signin');
+        //    }
+        //};
+        //s.init();
 
         var date = new Date();
         var year = date.getFullYear();
