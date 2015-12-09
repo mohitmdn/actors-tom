@@ -1,0 +1,56 @@
+<div class="page-signin" ng-controller="authCtrl">
+    <div class="auth-container">
+        <div class="signin-header">
+            <section class="logo text-center">
+                <h1><a href="#/">{{main.brand}}</a></h1>
+            </section>
+        </div>
+        <div class="signin-body">
+            <div class="form-container">
+                <form class="form-horizontal" ng-submit="login()">
+                    <fieldset>
+                        <div class="form-info">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="ti-email"></span>
+                                    </span>
+                                    <input type="email"
+                                           ng-model="user.email"
+                                           class="form-control input-lg"
+                                           placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group form-group-last">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="ti-lock"></span>
+                                    </span>
+                                    <input type="password"
+                                           ng-model="user.password"
+                                           class="form-control input-lg"
+                                           placeholder="Password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block text-center">Log in</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="{{alert.class}}" data-ng-show="alert.show">{{alert.message}}</div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="divider"></div>
+            <section class="additional-info">
+                <p class="text-right">
+                    <a href="#/pages/forgot-password">Forgot your password?</a>
+                    <span> | </span>
+                    <a href="#/pages/signup">Sign up</a>
+                </p>
+            </section>
+        </div>
+    </div>
+</div>
