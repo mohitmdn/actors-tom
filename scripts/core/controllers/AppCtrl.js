@@ -2,78 +2,57 @@
     'use strict';
 
     angular.module('app')
-        .controller('AppCtrl', [ '$scope', '$rootScope', '$route', '$document', '$location', AppCtrl]);
+        .controller('AppCtrl', [ '$scope', '$rootScope', '$document', '$location', 'ApiService', '$routeParams', AppCtrl]);
 
 
-    function AppCtrl($scope, $rootScope, $route, $document, $location) {
+    function AppCtrl($scope, $rootScope, $document, $location, ApiService, $routeParams) {
 
         var s = $scope,
             rs = $rootScope;
 
-        s.init = function() {
-            if (!rs.user) {
-                $location.path('/pages/signin');
-            }
-        };
-        s.init();
+        //s.init = function() {
+        //    if (!rs.user) {
+        //        $location.path('/pages/signin');
+        //    }
+        //};
+        //s.init();
 
-        var date = new Date();
-        var year = date.getFullYear();
-
-        $scope.main = {
-            brand: 'Actors',
-            name: 'Lisa',
-            year: year
-        };
-
-        $scope.pageTransitionOpts = [
-            {
-                name: 'Fade up',
-                "class": 'animate-fade-up'
-            }, {
-                name: 'Scale up',
-                "class": 'ainmate-scale-up'
-            }, {
-                name: 'Slide in from right',
-                "class": 'ainmate-slide-in-right'
-            }, {
-                name: 'Flip Y',
-                "class": 'animate-flip-y'
-            }
-        ];
-
-        $scope.admin = {
-            layout: 'wide',                                 // 'boxed', 'wide'
-            menu: 'vertical',                               // 'horizontal', 'vertical', 'collapsed'
-            fixedHeader: true,                              // true, false
-            fixedSidebar: true,                             // true, false
-            pageTransition: $scope.pageTransitionOpts[0],   // unlimited
-            skin: '12'                                      // 11,12,13,14,15,16; 21,22,23,24,25,26; 31,32,33,34,35,36
+        var getExtraActorDetails = function(table, column) {
+            ApiService.get(table).then(function(res){
+                rs[table] = res;
+                angular.forEach(rs[table], function(elem){
+                    if (!rs.actors[elem.actor_id][column]) {
+                        rs.actors[elem.actor_id][column] = [];
+                    }
+                    rs.actors[elem.actor_id][column].push(elem);
+                });
+            });
         };
 
-        $scope.$watch('admin', function(newVal, oldVal) {
-            if (newVal.menu === 'horizontal' && oldVal.menu === 'vertical') {
-                $rootScope.$broadcast('nav:reset');
-            }
-            if (newVal.fixedHeader === false && newVal.fixedSidebar === true) {
-                if (oldVal.fixedHeader === false && oldVal.fixedSidebar === false) {
-                    $scope.admin.fixedHeader = true;
-                    $scope.admin.fixedSidebar = true;
+        if (!rs.actors) {
+            rs.actors = {};
+            ApiService.get('actors').then(function(actors){
+
+                angular.forEach(actors, function(actor){
+                    rs.actors[actor.id] = actor;
+                });
+
+                getExtraActorDetails('actors_photos', 'photos');
+                getExtraActorDetails('actors_reel', 'reel');
+                getExtraActorDetails('actors_resume', 'resume');
+                getExtraActorDetails('actors_resume_extra', 'resume_extra');
+
+                if ($routeParams.actorId) {
+                    rs.actor = rs.actors[$routeParams.actorId]
                 }
-                if (oldVal.fixedHeader === true && oldVal.fixedSidebar === true) {
-                    $scope.admin.fixedHeader = false;
-                    $scope.admin.fixedSidebar = false;
-                }
+            });
+        } else {
+            if ($routeParams.actorId) {
+                rs.actor = rs.actors[$routeParams.actorId]
             }
-            if (newVal.fixedSidebar === true) {
-                $scope.admin.fixedHeader = true;
-            }
-            if (newVal.fixedHeader === false) {
-                $scope.admin.fixedSidebar = false;
-            }
-        }, true);
+        }
 
-        $scope.color = {
+        s.color = {
             primary: '#7992BF',
             success: '#A9DC8E',
             info: '#6BD5C3',
@@ -83,9 +62,11 @@
             gray: '#DCDCDC'
         };
 
-        $rootScope.$on("$routeChangeSuccess", function (event, currentRoute, previousRoute) {
+        rs.$on("$routeChangeSuccess", function (event, currentRoute, previousRoute) {
             $document.scrollTo(0, 0);
         });
+
+        $('.fancybox').fancybox();
     }
 
 })();

@@ -1,0 +1,42 @@
+'use strict';
+requirejs.config({
+    "baseUrl": 'scripts',
+    "paths": {},
+    "shim": {}
+});
+requirejs([
+    'app',
+    'core/controllers/AppCtrl',
+    'core/services/api.service',
+    'core/i18n/i18n',
+    'core/config/routes',
+    'chart/chart.module',
+    'chart/chart.controller',
+    'chart/chart.directive',
+    'form/form.module',
+    'form/form.controller',
+    'form/form.directive',
+    'form/formValidation.module',
+    'form/formValidation.controller',
+    'form/formValidation.directive',
+    'page/page.module',
+    'page/page.controller',
+    'page/page.directive',
+    'layout/nav.module',
+    'layout/nav.directive',
+    'table/table.module',
+    'table/table.controller',
+    'app/task/task.module',
+    'app/task/task.controller',
+    'app/task/task.directive',
+    'app/task/task.service',
+    'app/calendar/calendar.module',
+    'app/calendar/calendar.controller',
+    'ui/ui.module',
+    'ui/ui.controller',
+    'ui/ui.directive',
+    'ui/ui.service',
+    'ui/map.module',
+    'ui/map.controller',
+    'ui/map.directive'
+]);

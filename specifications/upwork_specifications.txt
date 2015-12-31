@@ -1,0 +1,48 @@
+I want to say I am very sorry that I posted this job before but never resolved it before it expired. I had some family issues that needed attending. So I am trying this again and hopefully someone here can help.
+
+Please, when responding, read the whole description here and write a reply to my question at the end so I know you have read the whole thing and not just sent me a typical copied message. People and companies sometimes send messages saying "I can help you with your job" but they don't always read the whole description.
+
+I need a website community for actors where members sign up after paying (through paypal). I accept or decline them. Once accepted they can upload a PDF file or JPG to represent them and they would have 10 fields to fill out (name, address,  different sizes like waist and hat size etc... and their youtube link of their reel, etc...).
+
+It would be great if next to their listing on the website would be a thumbnail of their headshot. And in their profile page people (viewers) could open their headshot or resume.
+
+I have used PHP Link Directory before for some of my websites but they do not have a template for this type of site. I thought about possibly installing this script (PHPLinkDirectory) - google it) and than maybe you could customize it. Just a thought. But now (after reposting the job here) I have decided to use wordpress and need someone to do the backend code for this. So knowing wordpress AND code is invaluable and what is needed. 
+
+I have a few other ideas like the viewer being able to click "favorites" for a member and see them all on another page. I can show you sites that I like or want to emulate.
+
+I made a list of sites (7) that have specific features that I like. I also made a list of about 10 different plugins for "community members"/wordpress if that is a path we would take (tweaking or customizing that plugin). I have not seen any plugin that does exactly what I need or want which is why I ma here.
+
+I am a web designer so I'm not completely new to all this and have ideas on how much and how long it can take but I need your help.
+
+Please understand that I do NOT need help with wordpress or installing it especially since I already installed it. But I want and need the member site to be customized and just right.
+
+I am most definitely going to use wordpress. I even already installed it in a brand new hosting account I set up. So my question is this - would it be easier for you to customize a "community member" plugin or create one from scratch?
+
+Thank you,
+Tom
+
+P.S. I wanted to add that some of the members will have sizes in fields and others will not. There will be 4-5 different types of members (actors, extras, stunts, dancers, musical performers).
+
+
+
+
+ Cover Letter
+
+Hey,
+
+So you need a website for actors that pay using paypal and get their profile page. From what I understand you need the following features:
+
+- ownership and validation on which members do you accept or not
+- select boxes for different sizes such as waist, height, weight, 
+(optional, of course)
+- paypal payments
+- posibility of uploading pdf files
+- aprox. 10 input text fields to represent an actor
+- posibility of uploading images (jpg, png etc.)
+- social media, for youtube channel and posible other features
+- profile page for each user, with mugshot
+
+I understand you already have installed wordpress, and you do pretty much the designing work. This is GREAT ! 
+Its much more convenient to start from scratch a new plugin, we will have more flexibility and we can modify easily in the future.
+
+Tell me what you think :D

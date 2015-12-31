@@ -1,0 +1,78 @@
+
+performer categories 
+
+Performers:
+
+
+Actors 
+(male/female/child - later - no child performers now)
+
+Stunt Performers
+(male/female)
+
+Extras
+(male/female)
+
+Extras with cars
+(male/female)
+
+Musicians
+(Accordion, Banjo,  ** Bass guitar, Bassoon, Cello, Clarinet, ** Drums, Fiddle, Flute, French horn, ** Guitar, Harmonica, Harp, Mandolin, Oboe, Percussion, ** Piano, Saxophone, ** singer/Singing, Trombone, Trumpet, Tuba, Ukulele, Upright bass, Violin)
+
+Dancers 
+(male/female)
+
+In these cities - (or do you think just listing all major cities is way to go?
+
+Albuquerque, NM
+Atlanta, GA
+Austin, TX
+Boston, MA
+Chicago, IL
+Denver, CO
+Houston, TX
+Las Vegas, NV
+Los Angeles, CA
+Memphis, TN
+Miami, FL
+New Orleans, LA
+New York, NY
+Orlando, FL
+Philadelphia, PA
+Phoenix, AZ
+Portland, Oregon
+Richmond, VA
+Saint Louis, MO
+San Antonio, TX
+San Diego, CA
+San Francisco, CA
+Seattle, WA
+Washington, DC
+Wichita, KS
+
+ - - - -   here Are some questions/notes  below from someone at a company who asked me to tell them details on project  - - - - - - 
+
+What are 3 or 4 main things you want visitors to see on your home page? *
+A column of casting calls from casting directors, a search feature,  a few featured members, a banner for "How to use site" linking to a video (of which i will do), and  a few banners for promoting partners and an ad placement.
+
+
+Special Instructions *
+I have found some "member plugins" for wordpress that I thought were interesting. SO what I had said to Mike earlier was, I can send you guys a few of these plugins and you can tell me if 1. they are crap or a waste of time and/or 2. whether it would be easier for you to create the code for the search and the members pages. It would also be good to allow some people to make their page private unless requested. And in the future but not now I would like people to be able to PM, email or communicate somehow to each other as well as have others like or support their page.
+
+*** Also, this is a site that (like CMG and a few others) is a tool for people in the business and does not need much design work (nothing fancy and it must be clean - white background). What I'm looking for is good code work so the member section works as well as search and saving profiles that you like. Thank you. I hope you guys can do something for me  - I have about 100 websites of which at least 10-20 I am going to need work done in the future. Thanks again.
+
+
+ - - - -other real important notes on site - - - - 
+
+This is going to be a casting website for actors, extras, musical and dance performers and stunt performers. People should be able to sign up, wait for approval, once signed up be able to upload resume and headshot (PDF files or JPEG only). The other users (casting agents) should be able to search by type of performer (extra, actor, etc...) height, weight, hair, etc.... for all members. There would have to be some stats that are not offered or shown for extras and actors such as "stunt skills (driving, burn, falls, water, etc...)" - these would be just offered/shown for stunt performers.
+
+http://cmgtalent.com/
+This page specifically - http://cmgtalent.com/male-south-zepernick2.php
+stunts unlimited - 
+these pages specifically for design and layout - http://stuntsunlimited.com/artist/brent-fletcher/
+http://stuntsunlimited.com/meet-the-team/
+this website here for search - https://www.istunt.com/
+this main page member layout is best with height and weight - https://www.istunt.com/users/search
+
+also - for features - this site allows you to create a favorites "bundle" so after clicking "add to bundle" it saves it so if you click 5 peopel and add to bundle you have a llist of peopel you like either for yourself or to share. here is that site - http://www.xctionbiz.com/profiles/2615.html
+

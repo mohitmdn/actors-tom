@@ -6,7 +6,6 @@
             var routes, setRoutes;
 
             routes = [
-                'dashboard',
                 'ui/typography', 'ui/buttons', 'ui/icons', 'ui/grids', 'ui/widgets', 'ui/components', 'ui/boxes', 'ui/timeline', 'ui/nested-lists', 'ui/pricing-tables', 'ui/maps',
                 'tables/static', 'tables/dynamic', 'tables/responsive',
                 'forms/elements', 'forms/layouts', 'forms/validation', 'forms/wizard',
@@ -30,11 +29,21 @@
                 return setRoutes(route);
             });
 
+
+            $routeProvider.when('/home', {
+                templateUrl: 'views/home.html',
+                controller: 'AppCtrl'
+            });
+
+            $routeProvider.when('/actor/:actorId', {
+                templateUrl: 'views/actor.html',
+                controller: 'AppCtrl'
+            });
+
             $routeProvider
-                .when('/', {redirectTo: '/dashboard'})
+                .when('/', {redirectTo: '/home'})
                 .when('/404', {templateUrl: 'views/pages/404.html'})
                 .otherwise({ redirectTo: '/404'});
-
         }]
     );
 

@@ -1,0 +1,29 @@
+<div class="clearfix">&nbsp;</div>
+<div class="row">
+    <div class="panel panel-default" style="padding: 20px;">
+        <div class="input-group col-md-offset-2 col-md-8">
+            <span class="input-group-addon"><i class="ti-search"></i></span>
+            <input type="text" ng-model="actor_search" class="form-control" style="height: 40px;" placeholder="Search your favorite actor ...">
+        </div>
+    </div>
+</div>
+<div class="clearfix">&nbsp;</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="actor in actors | array | filter:{name:actor_search}">
+        <a href="#/actor/{{actor.id}}">
+            <div class="thumbnail" style="height: 500px;">
+                <div class="clearfix">&nbsp;</div>
+                <img alt="" src="{{actor.profile_image_thumb}}">
+                <div class="caption">
+                    <h3>
+                        {{actor.name}} <img src="{{actor.country_flag_img}}" style="height: 30px; width: auto; float: right;" />
+                    </h3>
+                    <p>
+                        <strong>Tel:</strong> <i>{{actor.service_tel || actor.mobile_tel}}</i> <br />
+                        <strong>Contact:</strong> <i>{{actor.email || actor.website}}</i> <br />
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

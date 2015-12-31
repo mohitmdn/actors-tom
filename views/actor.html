@@ -1,0 +1,143 @@
+<style>
+    .actor-table tr td {
+        font-weight: bold;
+    }
+</style>
+<div class="row">
+    <div class="col-md-5">
+        <a href="{{actor.profile_image}}" class="fancybox" rel="actor_images">
+            <img src="{{actor.profile_image}}" style="box-shadow: 13px 6px 15px -4px rgba(0, 0, 0, 0.48);" />
+        </a>
+        <div class="clearfix">&nbsp;</div>
+        <div class="label-info" style="padding: 15px;">
+            <a href="{{actor.imdb_link}}" ng-if="actor.imdb_pro_link" target="_blank">
+                <img src="https://d2db72b4uf0tl8.cloudfront.net/layout/default/img/imdb.png?v=1" style="height: 30px; width: auto;" />
+            </a>
+            <a href="{{actor.imdb_pro_link}}" ng-if="actor.imdb_pro_link" target="_blank">
+                <img src="https://d2db72b4uf0tl8.cloudfront.net/img/imdb_pro.png?v=1" style="margin-left: 15px; height: 25px; width: auto;" />
+            </a>
+            <a href="{{actor.pdf_resume}}" ng-if="actor.pdf_resume">
+                <img src="http://icons.iconarchive.com/icons/graphicloads/filetype/128/pdf-icon.png" style="height: 60px; width: auto;float: right;" />
+            </a>
+        </div>
+        <div class="clearfix"></div>
+        <img src="{{actor.logo_img}}" ng-if="actor.logo_img" />
+    </div>
+    <div class="col-md-7">
+        <h1 style="font-size: 42px;">{{actor.name}} <img src="{{actor.country_flag_img}}" ng-if="actor.country_flag_img" style="margin-right: 15px; height: 35px; width: auto; float: right;" /></h1>
+        <div class="clearfix">&nbsp;</div>
+        <article style="font-size: 14px;">
+            <div class="col-md-6">
+                <b>Service tel:</b> <i style="margin-left: 20px;">{{actor.service_tel || '-'}}</i> <br />
+                <b>Mobile tel:</b> <i style="margin-left: 20px;">{{actor.mobile_tel || '-'}}</i>
+            </div>
+            <div class="col-md-6">
+                <b>Email:</b> <i style="margin-left: 20px;">{{actor.email || '-'}}</i><br />
+                <b>Website:</b> <i style="margin-left: 20px;">{{actor.website || '-'}}</i><br />
+                <b>Address:</b> <i style="margin-left: 20px;" ng-bind-html="actor.address"></i><br />
+            </div>
+        </article>
+        <div class="clearfix">&nbsp;</div>
+        <div class="clearfix">&nbsp;</div>
+        <div class="panel panel-default">
+            <table class="table actor-table">
+                <tbody>
+                    <tr ng-if="actor.gender">
+                        <td>Gender</td>
+                        <td>{{actor.gender}}</td>
+                    </tr>
+                    <tr ng-if="actor.height">
+                        <td>Height</td>
+                        <td>{{actor.height}}</td>
+                    </tr>
+                    <tr ng-if="actor.weight">
+                        <td>Weight</td>
+                        <td>{{actor.weight}}</td>
+                    </tr>
+                    <tr ng-if="actor.birthdate">
+                        <td>Birthdate</td>
+                        <td>{{actor.birthdate}}</td>
+                    </tr>
+                    <tr ng-if="actor.eyes">
+                        <td>Eyes</td>
+                        <td>{{actor.eyes}}</td>
+                    </tr>
+                    <tr ng-if="actor.hair_color">
+                        <td>Hair color</td>
+                        <td>{{actor.hair_color}}</td>
+                    </tr>
+                    <tr ng-if="actor.hair_length">
+                        <td>Hair length</td>
+                        <td>{{actor.hair_length}}</td>
+                    </tr>
+                    <tr ng-if="actor.waist">
+                        <td>Waist</td>
+                        <td>{{actor.waist}}</td>
+                    </tr>
+                    <tr ng-if="actor.inseam">
+                        <td>Inseam</td>
+                        <td>{{actor.inseam}}</td>
+                    </tr>
+                    <tr ng-if="actor.shoe_size">
+                        <td>Shoe size</td>
+                        <td>{{actor.shoe_size}}</td>
+                    </tr>
+                    <tr ng-if="actor.physique">
+                        <td>Physique</td>
+                        <td>{{actor.physique}}</td>
+                    </tr>
+                    <tr ng-if="actor.dress_size">
+                        <td>Dress size</td>
+                        <td>{{actor.dress_size}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <h2 class="col-xs-12 label-primary" style="color: #fff; padding: 15px 25px;">
+        <i class="fa fa-photo"></i> PHOTOS
+    </h2>
+    <div class="clearfix">&nbsp;</div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" ng-repeat="photo in actor.photos" ng-if="photo.img_large">
+        <a href="{{photo.img_large}}" class="fancybox" rel="actor_images">
+            <img src="{{photo.img_thumb}}" />
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h2 class="col-xs-12 label-primary" style="color: #fff; padding: 15px 25px;">
+        <i class="fa fa-file-o"></i> RESUME
+    </h2>
+    <div class="clearfix">&nbsp;</div>
+    <div class="panel panel-default">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Category</th>
+                    <th>Movie</th>
+                    <th>Role</th>
+                    <th>Actor</th>
+                </tr>
+            </thead>
+            <tr ng-repeat="r in actor.resume">
+                <td>&nbsp;</td>
+                <td>
+                    <p style="font-size: 17px; font-weight: bold;" ng-bind-html="r.category"></p>
+                </td>
+                <td>
+                    <p ng-bind-html="r.movie"></p>
+                </td>
+                <td>
+                    <p ng-bind-html="r.role"></p>
+                </td>
+                <td>
+                    <p ng-bind-html="r.actor"></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
