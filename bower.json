@@ -35,7 +35,8 @@
     "angular-translate-loader-static-files": "~2.8.0",
     "angular-scroll": "~0.7.0",
     "material-design-iconic-font": "~1.1.1",
-    "fancybox": "~2.1.5"
+    "fancybox": "~2.1.5",
+    "jquery-ui": "~1.11.4"
   },
   "devDependencies": {},
   "resolutions": {

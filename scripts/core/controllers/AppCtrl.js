@@ -67,6 +67,7 @@
         });
 
         $('.fancybox').fancybox();
+        $('.datepicker').datepicker();
     }
 
 })();

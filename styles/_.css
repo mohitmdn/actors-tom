@@ -3,4 +3,5 @@
 @import url(../lib/font-awesome/css/font-awesome.min.css);
 @import url(../lib/weather-icons/css/weather-icons.min.css);
 @import url(../lib/fancybox/source/jquery.fancybox.css);
+@import url(../lib/jquery-ui/themes/smoothness/jquery-ui.css);
 @import url(main.css);

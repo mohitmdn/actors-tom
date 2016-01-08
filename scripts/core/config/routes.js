@@ -29,21 +29,22 @@
                 return setRoutes(route);
             });
 
-
             $routeProvider.when('/home', {
                 templateUrl: 'views/home.html',
                 controller: 'AppCtrl'
-            });
-
-            $routeProvider.when('/actor/:actorId', {
+            }).when('/actor/:actorId', {
                 templateUrl: 'views/actor.html',
                 controller: 'AppCtrl'
+            }).when('/signup', {
+                templateUrl: 'views/signup.html',
+                controller: 'AppCtrl'
+            }).when('/', {
+                redirectTo: '/home'
+            }).when('/404', {
+                templateUrl: 'views/pages/404.html'
+            }).otherwise({
+                redirectTo: '/404'
             });
-
-            $routeProvider
-                .when('/', {redirectTo: '/home'})
-                .when('/404', {templateUrl: 'views/pages/404.html'})
-                .otherwise({ redirectTo: '/404'});
         }]
     );
 
